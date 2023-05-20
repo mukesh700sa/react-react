@@ -7,6 +7,7 @@ import Notfound from './pages/Notfound'
 import About from './pages/About'
 import Contact from './pages/Contact'
 import Aboutdetails from './pages/Aboutdetails'
+import About2 from './pages/About2'
 
 const App = () => {
 
@@ -40,10 +41,13 @@ const App = () => {
 
 
         <Route path='/' element={<Routlayout />}>
+
           <Route index element={<Homepages />} />
+
           <Route path='about' element={<About />} >
 
-            <Route path='aboutdetails' element={<Aboutdetails />} />
+            <Route index element={<Aboutdetails />} />
+            <Route path='about2' element={<About2 />} />
           </Route>
 
           <Route path='*' element={<Notfound />} />
